@@ -52,7 +52,23 @@
     "mockery": "^2.1.0",
     "nyc": "^15.1.0",
     "prettier": "^2.1.2",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "lunr": "^2.3.9",
+    "mini-css-extract-plugin": "^0.11.2",
+    "resolve-url-loader": "^3.1.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "ts-loader": "^8.0.3",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.4"
   },
   "files": [
     "bin",
@@ -73,7 +89,9 @@
     "prepublishOnly": "node scripts/set_strict.js false && npm run lint && npm run build_and_test",
     "postpublish": "node scripts/set_strict.js true",
     "prepare": "npm run build",
-    "clean": "rm -rf node_modules package-lock.json lib coverage"
+    "clean": "rm -rf node_modules package-lock.json lib coverage",
+    "docs": "parcel --open watch docs/index.html",
+    "createDocs": "typedoc --out docs src/test_files/ --ignoreCompilerErrors --theme themes/dgs_theme npm run docs"
   },
   "keywords": [
     "typescript",

@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 .tscache
+.cache
 .baseDir.js
 .baseDir.ts
 yarn.lock
@@ -17,3 +18,7 @@ typedoc*.tgz
 tmp
 
 src/test/renderer/specs/assets/*
+
+docs
+
+src/test_files/
